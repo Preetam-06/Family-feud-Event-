@@ -1,5 +1,7 @@
 # Family Feud — Tournament (Python, zero dependencies)
 
+Local development and Docker Compose are the supported runtimes for the live event. The game keeps its live match state in JSON files, so it must run as one persistent process with the repository's `data/` folder mounted.
+
     python app.py          # Python 3.9+, nothing to install
 
     docker compose up --build   # Docker, state persisted in ./data
@@ -45,7 +47,19 @@ A corrupted file is never reset silently — the server stops and tells you to r
 
 Run ONE server instance only (JSON files are not multi-process safe).
 
-## Deploy to Vercel
+## Local/Docker event mode
+
+Run only one server instance. Do not use Vercel/serverless hosting for a live match: serverless instances do not share the JSON state folder, which can make a match appear to restart when traffic moves between instances.
+
+```bash
+python app.py
+# or
+docker compose up --build
+```
+
+Keep the `data/` volume when restarting Docker. Use `docker compose down` (not `down -v`) so tournament state remains available.
+
+## Vercel (not recommended for live events)
 
 The repository includes `vercel.json` and `api/index.py`, so it can be imported directly into Vercel or deployed with the Vercel CLI:
 

@@ -18,7 +18,7 @@ window.feudSound = (() => {
     strike: new Audio('/static/audio/strike.mp3'),
     correct: new Audio('/static/audio/correct.mp3')
   };
-  Object.values(clips).forEach(c => { c.preload = 'auto'; c.volume = .82; });
+  Object.values(clips).forEach(c => { c.preload = 'auto'; c.volume = 1; });
   const audio = () => {
     if (!enabled) return null;
     ctx ||= new (window.AudioContext || window.webkitAudioContext)();
@@ -34,13 +34,28 @@ window.feudSound = (() => {
     o.connect(g).connect(c.destination); o.start(at); o.stop(at + length + 0.02);
   };
   return {
-    unlock() { audio(); },
+    unlock() {
+      const c = audio(); if (!c) return;
+      Object.values(clips).forEach(clip => {
+        if (!clip._feudSource) {
+          const source = c.createMediaElementSource(clip), gain = c.createGain();
+          gain.gain.value = 2.2; // boost the supplied effects for a projector
+          source.connect(gain).connect(c.destination);
+          clip._feudSource = source;
+        }
+      });
+    },
     toggle() { enabled = !enabled; localStorage.setItem('feud-sound', enabled ? 'on' : 'off'); if (enabled) audio(); return enabled; },
     isEnabled() { return enabled; },
     play(kind) {
       if (!enabled) return;
       const clip = clips[kind];
-      if (clip) { clip.currentTime = 0; clip.play().catch(() => {}); return; }
+      if (clip) {
+        this.unlock();
+        clip.pause(); clip.currentTime = 0;
+        clip.play().catch(() => {});
+        return;
+      }
       const c = audio(); if (!c) return;
       const t = c.currentTime + 0.01;
       if (kind === 'strike') {
