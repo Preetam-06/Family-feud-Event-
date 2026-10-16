@@ -123,6 +123,7 @@ html,body{margin:0;height:100%;background:#03061f;overflow:hidden;cursor:none;fo
 .pausev{position:absolute;inset:0;display:grid;place-items:center;font-size:150px;font-weight:900;letter-spacing:.2em;background:#020624d9;z-index:25;opacity:0;visibility:hidden;transition:.3s}
 .pausev.on{opacity:1;visibility:visible}
 #hint{position:absolute;left:50%;bottom:50px;transform:translateX(-50%);font-size:26px;background:#000a;padding:8px 22px;border-radius:12px;z-index:40;transition:opacity 1s}
+#sound{position:absolute;right:28px;bottom:50px;border:1px solid #ffffff55;border-radius:10px;background:#0008;color:#fff;padding:8px 13px;font:700 16px inherit;cursor:pointer;z-index:41}
 canvas{position:absolute;inset:0;pointer-events:none;z-index:50}
 @media (prefers-reduced-motion:reduce){.beams,.logo .ring{animation:none}}
 </style>
@@ -167,7 +168,7 @@ canvas{position:absolute;inset:0;pointer-events:none;z-index:50}
   <div id="xfx"></div>
   <div id="pausev" class="pausev">PAUSED</div>
   <canvas id="cv" width="1920" height="1080"></canvas>
-  <div id="hint">Press F for full screen</div>
+  <div id="hint">Press F for full screen</div><button id="sound" type="button">🔊 Sound on</button>
 </div>
 
 <script src="/static/common.js"></script>
@@ -182,6 +183,9 @@ addEventListener('dblclick',toggleFS);
 function toggleFS(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}
 setTimeout(()=>$('#hint').style.opacity=0,7000);
 document.addEventListener('fullscreenchange',()=>{$('#hint').style.display=document.fullscreenElement?'none':''});
+function updateSound(){const on=feudSound.isEnabled();$('#sound').textContent=on?'🔊 Sound on':'🔇 Sound off';$('#sound').style.opacity=on?'1':'.65'}
+$('#sound').addEventListener('click',e=>{e.stopPropagation();feudSound.toggle();feudSound.unlock();updateSound()});
+addEventListener('pointerdown',()=>feudSound.unlock(),{once:true});updateSound();
 
 async function pull(){try{const r=await fetch('/api/screen',{cache:'no-store'});render(await r.json())}catch(e){}}
 new EventSource('/events').onmessage=pull;
@@ -277,7 +281,8 @@ function handleFx(s){
   const f=s.fx;
   if(lastFx===null){lastFx=f.id;return}
   if(f.id===lastFx)return;lastFx=f.id;
-  if(f.type==='strike')showX(f.n||1);
+  if(f.type==='strike'){showX(f.n||1);feudSound.play('strike')}
+  if(f.type==='reveal'||f.type==='steal_win')feudSound.play('correct');
   if(f.type==='start'){
     $('#il').textContent=s.current.label.toUpperCase();$('#i1').textContent=s.current.names.a;$('#i2').textContent=s.current.names.b;
     const o=$('#intro');o.classList.remove('on');o.innerHTML=o.innerHTML;o.classList.add('on');setTimeout(()=>o.classList.remove('on'),3800);
