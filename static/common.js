@@ -14,6 +14,11 @@ function setLogo(root, name) {
 window.feudSound = (() => {
   let ctx = null;
   let enabled = localStorage.getItem('feud-sound') !== 'off';
+  const clips = {
+    strike: new Audio('/static/audio/strike.mp3'),
+    correct: new Audio('/static/audio/correct.mp3')
+  };
+  Object.values(clips).forEach(c => { c.preload = 'auto'; c.volume = .82; });
   const audio = () => {
     if (!enabled) return null;
     ctx ||= new (window.AudioContext || window.webkitAudioContext)();
@@ -33,6 +38,9 @@ window.feudSound = (() => {
     toggle() { enabled = !enabled; localStorage.setItem('feud-sound', enabled ? 'on' : 'off'); if (enabled) audio(); return enabled; },
     isEnabled() { return enabled; },
     play(kind) {
+      if (!enabled) return;
+      const clip = clips[kind];
+      if (clip) { clip.currentTime = 0; clip.play().catch(() => {}); return; }
       const c = audio(); if (!c) return;
       const t = c.currentTime + 0.01;
       if (kind === 'strike') {

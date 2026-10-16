@@ -582,7 +582,9 @@ def build(admin=False):
 
 # ───────────────────────── http ─────────────────────────
 PAGES = {"/admin": ("admin.html", "text/html"), "/screen": ("screen.html", "text/html"),
-         "/static/theme.css": ("theme.css", "text/css"), "/static/common.js": ("common.js", "text/javascript")}
+         "/static/theme.css": ("theme.css", "text/css"), "/static/common.js": ("common.js", "text/javascript"),
+         "/static/audio/correct.mp3": ("audio/correct.mp3", "audio/mpeg"),
+         "/static/audio/strike.mp3": ("audio/strike.mp3", "audio/mpeg")}
 
 
 class H(BaseHTTPRequestHandler):
