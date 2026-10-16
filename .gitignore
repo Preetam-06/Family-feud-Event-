@@ -7,3 +7,5 @@ venv/
 data/*.bak
 data/*.tmp
 data/backups/
+
+.vercel
