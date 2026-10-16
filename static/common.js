@@ -39,8 +39,14 @@ window.feudSound = (() => {
       Object.values(clips).forEach(clip => {
         if (!clip._feudSource) {
           const source = c.createMediaElementSource(clip), gain = c.createGain();
-          gain.gain.value = 2.2; // boost the supplied effects for a projector
-          source.connect(gain).connect(c.destination);
+          const compressor = c.createDynamicsCompressor();
+          gain.gain.value = 4.5; // strong boost for projector speakers
+          compressor.threshold.value = -24;
+          compressor.knee.value = 18;
+          compressor.ratio.value = 8;
+          compressor.attack.value = .003;
+          compressor.release.value = .2;
+          source.connect(gain).connect(compressor).connect(c.destination);
           clip._feudSource = source;
         }
       });
