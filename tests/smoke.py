@@ -57,7 +57,8 @@ def clear_board(side_expected=None):
 
 proc = start()
 try:
-    check("unauthenticated action rejected", act("start_match", id="m1")[0] == 401)
+    check("host actions work without login", act("start_match", id="m1")[0] == 200)
+    act("reset", confirm="RESET")
     check("wrong pin rejected", call("/api/login", {"pin": "nope"})[0] == 401)
     check("login ok", call("/api/login", {"pin": "test"})[0] == 200)
     check("screen API is public", call("/api/screen", anon=True)[0] == 200)

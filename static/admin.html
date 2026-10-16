@@ -75,13 +75,6 @@ dialog::backdrop{background:#0a1250b0}
 </style>
 </head>
 <body>
-<div id="login"><div class="card">
-  <div class="logo" style="font-size:4px;margin:0 auto 22px"><div class="ring"></div><div class="ring r2"></div><div class="plate"><span>Family</span><span>Feud</span></div></div>
-  <h2>Host login</h2>
-  <input id="pin" type="password" placeholder="Admin PIN" autocomplete="current-password">
-  <div style="margin-top:14px"><button class="b" style="width:100%" onclick="login()">Log in</button></div>
-</div></div>
-
 <header>
   <div class="logo" style="font-size:2.3px"><div class="ring"></div><div class="ring r2"></div><div class="plate"><span>Family</span><span>Feud</span></div></div>
   <h1 id="evt">Admin Panel</h1><span class="chip" id="stat"></span>
@@ -115,19 +108,12 @@ const NAMES={NOT_STARTED:'Not started',SEMIFINALS_IN_PROGRESS:'Semifinals in pro
 function toast(m,err){const t=$('#toast');t.textContent=m;t.className='show'+(err?' err':'');clearTimeout(toast.t);toast.t=setTimeout(()=>t.className='',2600)}
 async function act(type,p={}){
   const r=await fetch('/api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type,aid:uid(),...p})});
-  if(r.status===401){$('#login').classList.add('on');return false}
   const j=await r.json().catch(()=>({}));
   if(!r.ok){toast(j.error||'Something went wrong',true);return false}
   return true;
 }
-async function login(){
-  const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pin:$('#pin').value})});
-  if(r.ok){$('#login').classList.remove('on');$('#pin').value='';pull()}else toast((await r.json()).error,true);
-}
-$('#pin').addEventListener('keydown',e=>{if(e.key==='Enter')login()});
 async function pull(){
   const r=await fetch('/api/admin',{cache:'no-store'});
-  if(r.status===401){$('#login').classList.add('on');return}
   A=await r.json();render();
 }
 new EventSource('/events').onmessage=pull;pull();

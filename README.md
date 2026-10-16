@@ -4,7 +4,7 @@
 
     docker compose up --build   # Docker, state persisted in ./data
 
-- Host:   http://localhost:8000/admin   (PIN = env `ADMIN_PIN`, default `feud2026`)
+- Host:   http://localhost:8000/admin   (no login required)
 - Screen: http://localhost:8000/screen  (open on the projector, press **F** for full screen)
 - Other devices on the same Wi-Fi: use the LAN address printed at startup.
 
@@ -24,12 +24,6 @@ docker compose logs -f
 
 # Stop the server
 docker compose down
-```
-
-Set a custom admin PIN before starting:
-
-```bash
-ADMIN_PIN=my-secure-pin docker compose up -d --build
 ```
 
 Open the admin page at http://localhost:8000/admin and the screen at http://localhost:8000/screen.
@@ -60,4 +54,4 @@ vercel login
 vercel --prod
 ```
 
-Set `ADMIN_PIN` in Vercel Project Settings before the event. Vercel serverless instances have temporary, instance-local storage; for a multi-host production event, use the local/Docker deployment or connect the state layer to a durable database before relying on server restarts or simultaneous hosts.
+Vercel serverless instances have temporary, instance-local storage; for a multi-host production event, use the local/Docker deployment or connect the state layer to a durable database before relying on server restarts or simultaneous hosts.

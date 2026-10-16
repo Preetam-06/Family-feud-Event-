@@ -621,7 +621,6 @@ class H(BaseHTTPRequestHandler):
         if path == "/api/screen":
             with LOCK: return self.send_body(200, build(False))
         if path == "/api/admin":
-            if not self.authed(): return self.send_body(401, {"error": "Login required"})
             with LOCK: return self.send_body(200, build(True))
         if path == "/api/health":
             return self.send_body(200, {"ok": True, "status": tstatus()})
@@ -672,8 +671,6 @@ class H(BaseHTTPRequestHandler):
             if path == "/api/logout":
                 return self.send_body(200, {"ok": True}, extra=[("Set-Cookie", "feud_admin=; Max-Age=0; Path=/")])
             if path == "/api/action":
-                if not self.authed():
-                    return self.send_body(401, {"error": "Login required"})
                 do_action(self.body())
                 return self.send_body(200, {"ok": True})
             self.send_body(404, {"error": "Not found"})

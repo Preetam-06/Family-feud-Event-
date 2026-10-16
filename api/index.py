@@ -63,8 +63,6 @@ def application(environ, start_response):
                 with core.LOCK:
                     return response(start_response, "200 OK", core.build(False))
             if path == "/api/admin":
-                if not authed(environ):
-                    return response(start_response, "401 Unauthorized", {"error": "Login required"})
                 with core.LOCK:
                     return response(start_response, "200 OK", core.build(True))
             if path == "/api/health":
@@ -85,8 +83,6 @@ def application(environ, start_response):
             if path == "/api/logout":
                 return response(start_response, "200 OK", {"ok": True}, [("Set-Cookie", "feud_admin=; Max-Age=0; Path=/")])
             if path == "/api/action":
-                if not authed(environ):
-                    return response(start_response, "401 Unauthorized", {"error": "Login required"})
                 core.do_action(body(environ))
                 return response(start_response, "200 OK", {"ok": True})
         return response(start_response, "404 Not Found", {"error": "Not found"})
