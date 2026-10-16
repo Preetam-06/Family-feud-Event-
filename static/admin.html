@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Feud — Host</title>
+<link rel="stylesheet" href="/static/theme.css">
+<style>
+*{box-sizing:border-box}
+:root{--mut:#6b7597;--line:#e4e8f6;--blue:#2457ff;--green:#12a35a;--red:#e5334a;--gold:#ffc83d;--bg:#f4f6ff}
+body{margin:0;min-height:100vh;font:15px/1.45 "Segoe UI",system-ui,Arial,sans-serif;color:var(--ink);background:radial-gradient(120% 70% at 50% 0,#2036b8,#0a1250 65%) fixed}
+header{display:flex;align-items:center;gap:20px;padding:14px 26px;color:#fff;flex-wrap:wrap}
+header h1{margin:0;font-size:20px}
+.chip{font-size:12px;font-weight:800;letter-spacing:.05em;padding:4px 10px;border-radius:99px;background:#ffffff26;white-space:nowrap}
+.chip.live{background:var(--green)}.chip.warn{background:#f59e0b;color:#000}.chip.done{background:#ffffff33}
+nav{display:flex;gap:6px;padding:0 26px;flex-wrap:wrap}
+nav button{border:0;background:#ffffff1a;color:#fff;font:inherit;font-weight:700;padding:9px 18px;border-radius:12px 12px 0 0;cursor:pointer}
+nav button.on{background:var(--bg);color:var(--ink)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#35e08a;margin-right:6px;box-shadow:0 0 8px #35e08a}
+main{background:var(--bg);margin:0 26px 26px;border-radius:0 18px 18px 18px;padding:22px;min-height:70vh}
+.screenbar{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:13px}
+.screenbar button,.screenbar a{border:0;background:#ffffff26;color:#fff;padding:6px 12px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+.screenbar button.on{background:var(--gold);color:#000}
+.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 0 var(--line),0 12px 30px #1a2a8a14}
+.b{border:0;border-radius:11px;padding:10px 16px;font:inherit;font-weight:800;cursor:pointer;background:var(--blue);color:#fff;transition:transform .08s,filter .15s}
+.b:hover{filter:brightness(1.1)}.b:active{transform:scale(.96)}.b:disabled{opacity:.35;cursor:not-allowed}
+.b.green{background:var(--green)}.b.red{background:var(--red)}.b.ghost{background:#eef1fc;color:var(--ink)}.b.gold{background:var(--gold);color:#000}
+.b.big{padding:16px 26px;font-size:18px}
+h2{margin:0 0 14px;font-size:20px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.muted{color:var(--mut)}
+input,select,textarea{font:inherit;padding:10px 12px;border:1.5px solid #d6dcf0;border-radius:10px;width:100%;background:#fff;color:var(--ink)}
+label{display:block;font-weight:700;font-size:13px;margin:12px 0 5px}
+/* bracket */
+.bracket{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.bracket{grid-template-columns:1fr}}
+.match h3{margin:0 0 4px}.match .vs{font-size:18px;font-weight:800;margin:10px 0}
+.match.livecard{outline:3px solid var(--green)}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:99px;background:#e9edfb}
+.badge.live{background:#d3f5e2;color:#0c7a42}.badge.done{background:#ffe9a8;color:#6b4a00}
+.log{font-size:12.5px;max-height:240px;overflow:auto;margin-top:18px}
+.log div{padding:4px 0;border-bottom:1px solid var(--line)}
+/* lists */
+.item{display:flex;align-items:center;gap:14px;padding:12px;border-bottom:1px solid var(--line)}
+.item:last-child{border:0}
+.badgeN{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;background:var(--blue);flex:none}
+.item .grow{flex:1;min-width:0}
+.sm{padding:6px 12px;font-size:13px}
+/* live */
+.livegrid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+@media(max-width:1000px){.livegrid{grid-template-columns:1fr}}
+.qbox{font-size:21px;font-weight:800;margin:6px 0 14px}
+.arow{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:12px;border:2px solid var(--line);margin-bottom:8px;background:#fff}
+.arow .n{width:30px;height:30px;border-radius:50%;background:#e9edfb;display:grid;place-items:center;font-weight:900;flex:none}
+.arow .t{flex:1;font-weight:700;font-size:17px}.arow .p{font-weight:900;color:var(--mut);width:40px;text-align:right}
+.arow.rev{background:#e8f9ef;border-color:#a8e5c3}.arow.rev .n{background:var(--green);color:#fff}
+.sc{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.team{border-radius:16px;padding:14px;text-align:center;color:#fff;border:3px solid transparent;transition:.2s}
+.team.sa{background:linear-gradient(#2549ff,#0a1fa6)}.team.sb{background:linear-gradient(#ff3a4f,#a30f23)}
+.team.act{border-color:var(--gold);box-shadow:0 0 0 3px #ffc83d66}
+.team .nm{font-weight:800;font-size:15px}.team .s{font-size:46px;font-weight:900;line-height:1.1}
+.xs{letter-spacing:4px;font-size:20px;margin:4px 0}
+.team .b{margin-top:6px}
+.banner{padding:12px 14px;border-radius:12px;font-weight:800;margin-bottom:12px}
+.banner.steal{background:#ffe1e5;color:#9a1226}.banner.pause{background:#fff0c2;color:#6b4a00}.banner.res{background:#e3ebff}
+.stack{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+kbd{background:#e9edfb;border-radius:5px;padding:1px 6px;font-size:12px;font-weight:700}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#0e1a4d;color:#fff;padding:12px 20px;border-radius:12px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:90vw}
+#toast.show{opacity:1}#toast.err{background:var(--red)}
+#login{position:fixed;inset:0;background:#0a1250;display:none;place-items:center;z-index:50}
+#login.on{display:grid}
+#login .card{width:340px;text-align:center}
+dialog{border:0;border-radius:18px;padding:22px;width:min(560px,92vw);box-shadow:0 30px 80px #000a}
+dialog::backdrop{background:#0a1250b0}
+</style>
+</head>
+<body>
+<div id="login"><div class="card">
+  <div class="logo" style="font-size:4px;margin:0 auto 22px"><div class="ring"></div><div class="ring r2"></div><div class="plate"><span>Family</span><span>Feud</span></div></div>
+  <h2>Host login</h2>
+  <input id="pin" type="password" placeholder="Admin PIN" autocomplete="current-password">
+  <div style="margin-top:14px"><button class="b" style="width:100%" onclick="login()">Log in</button></div>
+</div></div>
+
+<header>
+  <div class="logo" style="font-size:2.3px"><div class="ring"></div><div class="ring r2"></div><div class="plate"><span>Family</span><span>Feud</span></div></div>
+  <h1 id="evt">Admin Panel</h1><span class="chip" id="stat"></span>
+  <div class="screenbar"><span>Screen:</span>
+    <button data-sp="auto" onclick="act('spotlight',{value:'auto'})">Live board</button>
+    <button data-sp="title" onclick="act('spotlight',{value:'title'})">Title</button>
+    <button data-sp="bracket" onclick="act('spotlight',{value:'bracket'})">Bracket</button>
+    <a href="/screen" target="_blank">Open screen ↗</a>
+  </div>
+</header>
+<nav id="nav"></nav>
+<main id="view"></main>
+<div id="toast"></div>
+
+<dialog id="qd"><h2 id="qdt">Question</h2>
+  <label>Question</label><textarea id="qtext" rows="2"></textarea>
+  <label>Answers — add up to 6 options, one per line: <b>Answer | points</b></label><textarea id="qans" rows="8" placeholder="Clothes | 28&#10;Camera | 22&#10;Money | 18&#10;Phone | 14&#10;Snacks | 10&#10;Toiletries | 5"></textarea>
+  <label style="display:flex;gap:8px;align-items:center"><input id="qen" type="checkbox" style="width:auto"> Enabled</label>
+  <div class="row" style="margin-top:16px;justify-content:flex-end"><button class="b ghost" onclick="qd.close()">Cancel</button><button class="b" onclick="saveQ()">Save question</button></div>
+</dialog>
+
+<script src="/static/common.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>(crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now());
+const TABS=[['matches','Matches'],['live','Live control'],['teams','Teams'],['questions','Questions'],['settings','Settings']];
+let A=null, tab=localStorage.getItem('tab')||'matches', editQ=null;
+const NAMES={NOT_STARTED:'Not started',SEMIFINALS_IN_PROGRESS:'Semifinals in progress',WAITING_FOR_FINALISTS:'Waiting for finalists',FINAL_READY:'Final ready',FINAL_IN_PROGRESS:'Final in progress',TOURNAMENT_COMPLETED:'Tournament completed'};
+
+function toast(m,err){const t=$('#toast');t.textContent=m;t.className='show'+(err?' err':'');clearTimeout(toast.t);toast.t=setTimeout(()=>t.className='',2600)}
+async function act(type,p={}){
+  const r=await fetch('/api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type,aid:uid(),...p})});
+  if(r.status===401){$('#login').classList.add('on');return false}
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok){toast(j.error||'Something went wrong',true);return false}
+  return true;
+}
+async function login(){
+  const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pin:$('#pin').value})});
+  if(r.ok){$('#login').classList.remove('on');$('#pin').value='';pull()}else toast((await r.json()).error,true);
+}
+$('#pin').addEventListener('keydown',e=>{if(e.key==='Enter')login()});
+async function pull(){
+  const r=await fetch('/api/admin',{cache:'no-store'});
+  if(r.status===401){$('#login').classList.add('on');return}
+  A=await r.json();render();
+}
+new EventSource('/events').onmessage=pull;pull();
+setInterval(pull,8000);
+
+function go(t){tab=t;localStorage.setItem('tab',t);render(true)}
+function render(force){
+  if(!A)return;
+  const c=A.current, live=c&&c.status==='live';
+  $('#evt').textContent=A.event+' — Admin';
+  const st=$('#stat');st.textContent=NAMES[A.status];st.className='chip '+(live?'live':A.status==='TOURNAMENT_COMPLETED'?'done':'');
+  document.querySelectorAll('[data-sp]').forEach(b=>b.classList.toggle('on',b.dataset.sp===A.spotlight));
+  $('#nav').innerHTML=TABS.map(([k,l])=>`<button class="${k===tab?'on':''}" onclick="go('${k}')">${k==='live'&&live?'<span class="dot"></span>':''}${l}</button>`).join('');
+  const f=document.activeElement;
+  if(!force&&f&&$('#view').contains(f)&&/INPUT|SELECT|TEXTAREA/.test(f.tagName))return;   // don't wipe typing
+  $('#view').innerHTML=({matches:vMatches,live:vLive,teams:vTeams,questions:vQuestions,settings:vSettings})[tab]();
+}
+
+/* ───────── Matches ───────── */
+function vMatches(){
+  const live=A.bracket.some(m=>m.status==='live');
+  const cards=A.bracket.map(m=>{
+    const can=m.status==='pending'&&!live&&(m.id!=='m3'||(A.bracket[0].status==='done'&&A.bracket[1].status==='done'));
+    const sc=m.scores?` <span class="muted">(${m.scores.a} – ${m.scores.b})</span>`:'';
+    const btn=m.status==='pending'?`<button class="b" ${can?'':'disabled'} onclick="startM('${m.id}')">${m.id==='m3'?'Start Grand Final':'Start match'}</button>`
+      :m.status==='live'?`<button class="b green" onclick="go('live')">Open live control</button>`
+      :`<span class="badge done">Completed · locked</span>`;
+    return `<div class="card match ${m.status==='live'?'livecard':''}"><h3>${m.label}</h3><span class="badge ${m.status}">${m.status.toUpperCase()}</span>
+      <div class="vs">${esc(m.names[0])}<br><span class="muted">vs</span><br>${esc(m.names[1])}${sc}</div>
+      ${m.winner?`<p><b>Winner:</b> ${esc(m.winner)}</p>`:''}${btn}</div>`;
+  }).join('');
+  const champ=A.champion?`<div class="card" style="margin-bottom:16px;background:#fff6d6"><h2 style="margin:0">🏆 Champion: ${esc(A.champion)}</h2></div>`:'';
+  const logs=A.audit.slice(0,25).map(a=>`<div><span class="muted">${a.ts.slice(11)}</span> <b>${a.type}</b> ${a.match||''} ${esc(summ(a))}</div>`).join('');
+  return `${champ}<div class="bracket">${cards}</div><div class="card log"><b>Recent activity</b>${logs||'<div class="muted">Nothing yet</div>'}</div>`;
+}
+function summ(a){const {id,ts,type,match,...r}=a;return Object.entries(r).map(([k,v])=>`${k}=${typeof v==='object'?JSON.stringify(v):v}`).join(' ').slice(0,110)}
+async function startM(id){
+  const m=A.bracket.find(x=>x.id===id);
+  if(id==='m3'&&!confirm(`Start the Grand Final?\n${m.names[0]} vs ${m.names[1]}`))return;
+  if(await act('start_match',{id})){go('live')}
+}
+
+/* ───────── Live ───────── */
+function vLive(){
+  const c=A.current;
+  if(!c)return `<div class="card"><h2>No live match</h2><p class="muted">Start a match from the Matches tab.</p><button class="b" onclick="go('matches')">Go to matches</button></div>`;
+  if(c.status==='done')return `<div class="card"><h2>${c.label} finished</h2><p><b>Winner: ${esc(c.winner)}</b> — ${c.scores.a} to ${c.scores.b}</p><p class="muted">Result is locked. Start the next match from the Matches tab.</p><button class="b" onclick="go('matches')">Back to matches</button></div>`;
+  const play=c.phase==='play'||c.phase==='steal', res=c.phase==='resolved', last=c.qi===c.qtotal-1;
+  const rows=c.answers.map((a,i)=>{
+    const b=a.revealed?'<span class="muted">shown</span>':play?`<button class="b green sm" onclick="act('correct',{idx:${i}})">✓ Correct</button>`:res?`<button class="b ghost sm" onclick="act('reveal',{idx:${i}})">Show</button>`:'';
+    return `<div class="arow ${a.revealed?'rev':''}"><span class="n">${a.n}</span><span class="t">${esc(a.text)}</span><span class="p">${a.points}</span>${b}</div>`;
+  }).join('');
+  const team=s=>{
+    const x='✕'.repeat(c.strikes[s])+'<span style="opacity:.3">'+'✕'.repeat(Math.max(0,c.rules.strike_limit-c.strikes[s]))+'</span>';
+    return `<div class="team s${s} ${c.active===s&&play?'act':''}"><div class="nm">${esc(c.names[s])}</div><div class="s">${c.scores[s]}</div><div class="xs">${x}</div>
+      <button class="b ghost sm" ${c.phase==='play'?'':'disabled'} onclick="act('set_active',{side:'${s}'})">${c.active===s&&play?'● Answering':'Give turn'}</button>
+      <button class="b ghost sm" onclick="adj('${s}')">± Score</button></div>`;
+  };
+  let banner='';
+  if(c.paused)banner=`<div class="banner pause">⏸ Match paused — the screen shows PAUSED</div>`;
+  else if(c.phase==='steal')banner=`<div class="banner steal">STEAL — ${esc(c.names[c.stealer])} gets one answer. Click <b>Correct</b> on a tile, or <b>Wrong</b>.</div>`;
+  else if(res)banner=`<div class="banner res">Question resolved.${c.pool>0?' Pool of <b>'+c.pool+'</b> is waiting — award it below.':''}</div>`;
+  const pool=c.rules.mode==='pool'?`<span class="chip" style="background:#e9edfb;color:var(--ink)">Pot: ${c.pool}</span>`:'';
+  return `<div class="livegrid"><div class="card">
+      <div class="row"><b>${c.label}</b><span class="chip live">LIVE</span>${pool}<span class="muted">${c.tiebreak?'Tie-break':`Question ${c.qi+1}/${c.qtotal}`} · ${c.rules.mode==='pool'?'Pool':'Individual'} scoring</span></div>
+      <div class="qbox">${esc(c.question)}</div>${banner}${rows}
+      <p class="muted" style="margin:10px 0 0">Keys: <kbd>1</kbd>–<kbd>6</kbd> correct answer · <kbd>X</kbd> wrong · <kbd>N</kbd> next</p></div>
+    <div><div class="sc">${team('a')}${team('b')}</div>
+      <div class="stack">
+        <button class="b red big" ${play&&!c.paused?'':'disabled'} onclick="act('wrong')">✗ Wrong answer (strike)</button>
+        ${res&&c.pool>0?`<div class="row"><button class="b gold" style="flex:1" onclick="act('award_pool',{side:'a'})">Pool → ${esc(c.names.a)}</button><button class="b gold" style="flex:1" onclick="act('award_pool',{side:'b'})">Pool → ${esc(c.names.b)}</button></div>`:''}
+        ${res&&!last?`<button class="b big" onclick="act('next_question')">Next question ▶</button>`:''}
+        ${res&&last&&!c.tied?`<button class="b green big" onclick="finishM()">🏆 Finish match</button>`:''}
+        ${res&&last&&c.tied?`<button class="b gold big" onclick="act('tiebreak')">Tied! Start tie-break question</button>`:''}
+        ${res?`<button class="b ghost" onclick="act('reveal_all')">Show all answers</button>`:''}
+        <div class="row"><button class="b ghost" style="flex:1" ${c.undo?'':'disabled'} onclick="act('undo')">↶ Undo (${c.undo})</button>
+        <button class="b ghost" style="flex:1" onclick="act('${c.paused?'resume':'pause'}')">${c.paused?'▶ Resume':'⏸ Pause'}</button></div>
+      </div></div></div>`;
+}
+function finishM(){if(confirm('Finish this match and lock the result?'))act('finish')}
+async function adj(side){
+  const v=prompt('Add or subtract points (e.g. 10 or -10):');if(v===null)return;
+  const d=parseInt(v,10);if(!d){toast('Enter a whole number',true);return}
+  act('adjust',{side,delta:d});
+}
+addEventListener('keydown',e=>{
+  if(tab!=='live'||e.repeat||e.ctrlKey||e.metaKey||e.altKey||/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)||qd.open)return;
+  const c=A&&A.current;if(!c||c.status!=='live')return;
+  if(/^[1-8]$/.test(e.key))act('correct',{idx:+e.key-1});
+  else if(e.key.toLowerCase()==='x')act('wrong');
+  else if(e.key.toLowerCase()==='n')act('next_question');
+});
+
+/* ───────── Teams ───────── */
+function vTeams(){
+  const colors=['#2457ff','#e5334a','#f59e0b','#12a35a'];
+  return `<div class="card" style="max-width:640px"><h2>Teams</h2>${A.teams.map((t,i)=>`<div class="item"><span class="badgeN" style="background:${colors[i]}">${i+1}</span><div class="grow"><b>${esc(t.name)}</b></div><button class="b ghost sm" onclick="rename('${t.id}','${esc(t.name).replace(/'/g,"\\'")}')">✎ Rename</button></div>`).join('')}
+  <p class="muted">Four teams: A vs B and C vs D in the semifinals. Names lock once that team's match starts.</p></div>`;
+}
+async function rename(id,old){const n=prompt('Team name:',old.replace(/&#39;/g,"'"));if(n)act('team_rename',{id,name:n})}
+
+/* ───────── Questions ───────── */
+function vQuestions(){
+  const rows=A.questions.map((q,i)=>`<div class="item"><span class="badgeN">${i+1}</span><div class="grow"><b>${esc(q.text)}</b><div class="muted">${q.answers.map(a=>esc(a.text)+' '+a.points).join(' · ')}</div></div>
+    <label style="margin:0;display:flex;gap:6px;align-items:center;font-weight:600"><input type="checkbox" style="width:auto" ${q.enabled?'checked':''} onchange="toggleQ('${q.id}',this.checked)">On</label>
+    <button class="b ghost sm" onclick="openQ('${q.id}')">✎</button><button class="b red sm" onclick="delQ('${q.id}')">🗑</button></div>`).join('');
+  return `<div class="card"><div class="row" style="justify-content:space-between;margin-bottom:8px"><h2 style="margin:0">Questions (${A.questions.length})</h2>
+    <div class="row"><button class="b ghost sm" onclick="exportQ()">Export JSON</button><button class="b ghost sm" onclick="$('#imp').click()">Import JSON</button><button class="b" onclick="openQ()">+ Add question</button></div></div>
+    <input id="imp" type="file" accept=".json" hidden onchange="importQ(this)">
+    <p class="muted" style="margin:0 0 8px">Each match uses the next ${A.settings.per_match} enabled questions in this order (Semifinal 1 first). Matches keep their own copy, so edits never change past results. Unused questions serve as tie-breakers.</p>${rows}</div>`;
+}
+function openQ(id){
+  editQ=id||null;const q=A.questions.find(x=>x.id===id);
+  $('#qdt').textContent=q?'Edit question':'Add question';
+  $('#qtext').value=q?q.text:'';$('#qans').value=q?q.answers.map(a=>a.text+' | '+a.points).join('\n'):'';$('#qen').checked=q?q.enabled:true;
+  qd.showModal();
+}
+async function saveQ(){
+  const answers=$('#qans').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{
+    const i=l.lastIndexOf('|')>=0?l.lastIndexOf('|'):l.lastIndexOf(',');
+    return {text:l.slice(0,i).trim(),points:parseInt(l.slice(i+1),10)};
+  });
+  if(answers.some(a=>!a.text||!a.points)){toast('Each line needs: Answer | points',true);return}
+  if(await act('q_save',{id:editQ,text:$('#qtext').value,enabled:$('#qen').checked,answers}))qd.close();
+}
+function toggleQ(id,on){const q=A.questions.find(x=>x.id===id);act('q_save',{...q,enabled:on})}
+function delQ(id){if(confirm('Delete this question? Matches already started keep their copy.'))act('q_delete',{id})}
+function exportQ(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(A.questions,null,2)],{type:'application/json'}));a.download='questions.json';a.click()}
+function importQ(el){
+  const f=el.files[0];if(!f)return;
+  f.text().then(t=>{try{act('q_import',{questions:JSON.parse(t)}).then(ok=>ok&&toast('Imported'))}catch(e){toast('Not valid JSON',true)}});el.value='';
+}
+
+/* ───────── Settings ───────── */
+function vSettings(){
+  const s=A.settings, lock=A.started?'disabled':'';
+  return `<div class="card" style="max-width:560px"><h2>Event setup</h2>
+    <label>Event name</label><input id="s-event" value="${esc(s.event)}">
+    <label>Round label (shown on the title screen)</label><input id="s-round" value="${esc(s.round)}">
+    <label>Scoring mode</label><select id="s-mode" ${lock}><option value="pool" ${s.mode==='pool'?'selected':''}>Pool — answers build a pot; the winner of the question takes it</option><option value="individual" ${s.mode==='individual'?'selected':''}>Individual — each correct answer scores for the team that gave it</option></select>
+    <label>Strikes before a steal</label><select id="s-strikes" ${lock}>${[1,2,3,4,5].map(n=>`<option ${n===s.strike_limit?'selected':''}>${n}</option>`).join('')}</select>
+    <label>Questions per match</label><select id="s-per" ${lock}>${[1,2,3,4,5,6,7,8,9,10].map(n=>`<option ${n===s.per_match?'selected':''}>${n}</option>`).join('')}</select>
+    <label style="display:flex;gap:8px;align-items:center"><input id="s-steal" type="checkbox" style="width:auto" ${s.steal?'checked':''} ${lock}> Allow steals</label>
+    ${A.started?'<p class="muted">Scoring rules are locked because a match has started.</p>':''}
+    <div style="margin-top:16px"><button class="b" onclick="saveS()">Save event</button></div></div>
+    <div class="card" style="max-width:560px;margin-top:16px"><h2>Danger zone</h2><p class="muted">Starts a fresh tournament (teams, matches, scores). A backup is saved in <code>data/backups</code>. Questions are kept.</p><button class="b red" onclick="resetT()">Reset tournament</button></div>`;
+}
+function saveS(){
+  act('settings',{event:$('#s-event').value,round:$('#s-round').value,mode:$('#s-mode').value,strike_limit:$('#s-strikes').value,per_match:$('#s-per').value,steal:$('#s-steal').checked}).then(ok=>ok&&toast('Saved'));
+}
+function resetT(){const v=prompt('This erases all matches and scores.\nType RESET to confirm:');if(v)act('reset',{confirm:v}).then(ok=>ok&&toast('Tournament reset'))}
+</script>
+</body>
+</html>

@@ -1,0 +1,932 @@
+[
+  {
+    "id": "f01",
+    "text": "Name something siblings fight over at home.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "TV remote",
+        "points": 24
+      },
+      {
+        "text": "Food",
+        "points": 20
+      },
+      {
+        "text": "Clothes",
+        "points": 18
+      },
+      {
+        "text": "Phone charger",
+        "points": 16
+      },
+      {
+        "text": "Favourite seat",
+        "points": 12
+      },
+      {
+        "text": "Bed / Room",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f02",
+    "text": "Name something students carry in their bag for months without using.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Calculator",
+        "points": 24
+      },
+      {
+        "text": "Compass / Geometry box",
+        "points": 20
+      },
+      {
+        "text": "Old assignments",
+        "points": 18
+      },
+      {
+        "text": "Ruler",
+        "points": 16
+      },
+      {
+        "text": "Extra notebooks",
+        "points": 12
+      },
+      {
+        "text": "Diary",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f03",
+    "text": "What is the first thing people do in the morning?",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Check phone",
+        "points": 24
+      },
+      {
+        "text": "Turn off alarm",
+        "points": 20
+      },
+      {
+        "text": "Brush teeth",
+        "points": 18
+      },
+      {
+        "text": "Use the washroom",
+        "points": 16
+      },
+      {
+        "text": "Drink water",
+        "points": 12
+      },
+      {
+        "text": "Stretch / Yawn",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f04",
+    "text": "Name something people buy at a cinema even though it's ridiculously expensive.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Popcorn",
+        "points": 24
+      },
+      {
+        "text": "Cold drink / Coke",
+        "points": 20
+      },
+      {
+        "text": "Nachos",
+        "points": 18
+      },
+      {
+        "text": "Fries",
+        "points": 16
+      },
+      {
+        "text": "Sandwich",
+        "points": 12
+      },
+      {
+        "text": "Ice cream",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f05",
+    "text": "Name something students do when the professor says, \"You have five minutes left.\"",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Panic",
+        "points": 24
+      },
+      {
+        "text": "Write faster",
+        "points": 20
+      },
+      {
+        "text": "Guess",
+        "points": 18
+      },
+      {
+        "text": "Pray",
+        "points": 16
+      },
+      {
+        "text": "Copy",
+        "points": 12
+      },
+      {
+        "text": "Check answers",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f06",
+    "text": "Name something people lose exactly when they need it most.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Keys",
+        "points": 24
+      },
+      {
+        "text": "Phone",
+        "points": 20
+      },
+      {
+        "text": "Wallet",
+        "points": 18
+      },
+      {
+        "text": "Charger",
+        "points": 16
+      },
+      {
+        "text": "Earphones",
+        "points": 12
+      },
+      {
+        "text": "ID card",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f07",
+    "text": "Name something people pretend to dislike but secretly enjoy.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Gossip",
+        "points": 24
+      },
+      {
+        "text": "Romantic movies",
+        "points": 20
+      },
+      {
+        "text": "Reality shows",
+        "points": 18
+      },
+      {
+        "text": "Cheesy songs",
+        "points": 16
+      },
+      {
+        "text": "Junk food",
+        "points": 12
+      },
+      {
+        "text": "Cartoons",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f08",
+    "text": "Name something people secretly check on someone else's Instagram.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Following list",
+        "points": 24
+      },
+      {
+        "text": "Old photos",
+        "points": 20
+      },
+      {
+        "text": "Followers",
+        "points": 18
+      },
+      {
+        "text": "Stories",
+        "points": 16
+      },
+      {
+        "text": "Likes",
+        "points": 12
+      },
+      {
+        "text": "Highlights",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f09",
+    "text": "Name something a friend borrows and mysteriously forgets to return.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Money",
+        "points": 24
+      },
+      {
+        "text": "Pen",
+        "points": 20
+      },
+      {
+        "text": "Clothes",
+        "points": 18
+      },
+      {
+        "text": "Charger",
+        "points": 16
+      },
+      {
+        "text": "Books",
+        "points": 12
+      },
+      {
+        "text": "Headphones",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f10",
+    "text": "Name something people blame when they're late.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Traffic",
+        "points": 24
+      },
+      {
+        "text": "Alarm",
+        "points": 20
+      },
+      {
+        "text": "Rain",
+        "points": 18
+      },
+      {
+        "text": "Parents",
+        "points": 16
+      },
+      {
+        "text": "Bus / Metro",
+        "points": 12
+      },
+      {
+        "text": "Oversleeping",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f11",
+    "text": "What do students do when they see their crush in college?",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Stare",
+        "points": 24
+      },
+      {
+        "text": "Smile",
+        "points": 20
+      },
+      {
+        "text": "Blush",
+        "points": 18
+      },
+      {
+        "text": "Hide",
+        "points": 16
+      },
+      {
+        "text": "Fix their hair",
+        "points": 12
+      },
+      {
+        "text": "Act cool",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f12",
+    "text": "Name something that can instantly turn a college group chat into chaos.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Deadline",
+        "points": 24
+      },
+      {
+        "text": "Attendance",
+        "points": 20
+      },
+      {
+        "text": "Exam date",
+        "points": 18
+      },
+      {
+        "text": "Screenshots",
+        "points": 16
+      },
+      {
+        "text": "Gossip",
+        "points": 12
+      },
+      {
+        "text": "Last-minute plan",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f13",
+    "text": "Name something people pretend to be good at but secretly aren't.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Singing",
+        "points": 24
+      },
+      {
+        "text": "Dancing",
+        "points": 20
+      },
+      {
+        "text": "Cooking",
+        "points": 18
+      },
+      {
+        "text": "Gaming",
+        "points": 16
+      },
+      {
+        "text": "Studying",
+        "points": 12
+      },
+      {
+        "text": "Driving",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f14",
+    "text": "Name something you absolutely don't want others to see on your phone.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Chats",
+        "points": 24
+      },
+      {
+        "text": "Gallery",
+        "points": 20
+      },
+      {
+        "text": "Search history",
+        "points": 18
+      },
+      {
+        "text": "Screenshots",
+        "points": 16
+      },
+      {
+        "text": "Hidden photos",
+        "points": 12
+      },
+      {
+        "text": "Call history",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f15",
+    "text": "If your friend group got into trouble, what would be the most likely reason?",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Fighting",
+        "points": 24
+      },
+      {
+        "text": "Pranking someone",
+        "points": 20
+      },
+      {
+        "text": "Lying",
+        "points": 18
+      },
+      {
+        "text": "Breaking something",
+        "points": 16
+      },
+      {
+        "text": "Gossiping",
+        "points": 12
+      },
+      {
+        "text": "Being late",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f16",
+    "text": "Name something students do when the professor says, \"Attendance is compulsory.\"",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Fake illness",
+        "points": 24
+      },
+      {
+        "text": "Beg / Request",
+        "points": 20
+      },
+      {
+        "text": "Call friends",
+        "points": 18
+      },
+      {
+        "text": "Give excuses",
+        "points": 16
+      },
+      {
+        "text": "Complain",
+        "points": 12
+      },
+      {
+        "text": "Panic",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f17",
+    "text": "What's the one thing you should never let your best friend control?",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Phone",
+        "points": 24
+      },
+      {
+        "text": "Instagram",
+        "points": 20
+      },
+      {
+        "text": "Secrets",
+        "points": 18
+      },
+      {
+        "text": "Money",
+        "points": 16
+      },
+      {
+        "text": "Love life",
+        "points": 12
+      },
+      {
+        "text": "Personal decisions",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f18",
+    "text": "Name something people do when nobody is watching.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Sing",
+        "points": 24
+      },
+      {
+        "text": "Dance",
+        "points": 20
+      },
+      {
+        "text": "Talk to themselves",
+        "points": 18
+      },
+      {
+        "text": "Eat",
+        "points": 16
+      },
+      {
+        "text": "Cry",
+        "points": 12
+      },
+      {
+        "text": "Daydream",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f19",
+    "text": "Name something you should never say to an angry person.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Calm down",
+        "points": 24
+      },
+      {
+        "text": "Relax",
+        "points": 20
+      },
+      {
+        "text": "Chill",
+        "points": 18
+      },
+      {
+        "text": "Whatever",
+        "points": 16
+      },
+      {
+        "text": "Sorry",
+        "points": 12
+      },
+      {
+        "text": "\"Not a big deal\"",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f20",
+    "text": "Name something you would buy if everything became free for one day.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "iPhone",
+        "points": 24
+      },
+      {
+        "text": "Car",
+        "points": 20
+      },
+      {
+        "text": "House",
+        "points": 18
+      },
+      {
+        "text": "Clothes",
+        "points": 16
+      },
+      {
+        "text": "Jewellery",
+        "points": 12
+      },
+      {
+        "text": "Laptop",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f21",
+    "text": "Name something people do on a long road trip.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Sleep",
+        "points": 24
+      },
+      {
+        "text": "Sing",
+        "points": 20
+      },
+      {
+        "text": "Eat snacks",
+        "points": 18
+      },
+      {
+        "text": "Take photos",
+        "points": 16
+      },
+      {
+        "text": "Play games",
+        "points": 12
+      },
+      {
+        "text": "Watch the view",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f22",
+    "text": "Name something people do during a power cut.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Light candles",
+        "points": 24
+      },
+      {
+        "text": "Use a torch",
+        "points": 20
+      },
+      {
+        "text": "Sleep",
+        "points": 18
+      },
+      {
+        "text": "Complain",
+        "points": 16
+      },
+      {
+        "text": "Sit outside",
+        "points": 12
+      },
+      {
+        "text": "Use phone",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f23",
+    "text": "Name something people are scared of.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Ghosts",
+        "points": 24
+      },
+      {
+        "text": "Snakes",
+        "points": 20
+      },
+      {
+        "text": "Heights",
+        "points": 18
+      },
+      {
+        "text": "Darkness",
+        "points": 16
+      },
+      {
+        "text": "Exams",
+        "points": 12
+      },
+      {
+        "text": "Spiders",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f24",
+    "text": "Name something people do on a rainy day.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Drink chai",
+        "points": 24
+      },
+      {
+        "text": "Eat pakoras",
+        "points": 20
+      },
+      {
+        "text": "Sleep",
+        "points": 18
+      },
+      {
+        "text": "Watch movies",
+        "points": 16
+      },
+      {
+        "text": "Play in the rain",
+        "points": 12
+      },
+      {
+        "text": "Listen to music",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f25",
+    "text": "Name something people promise to start \"next Monday.\"",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Gym / Workout",
+        "points": 24
+      },
+      {
+        "text": "Dieting",
+        "points": 20
+      },
+      {
+        "text": "Waking up early",
+        "points": 18
+      },
+      {
+        "text": "Studying",
+        "points": 16
+      },
+      {
+        "text": "Saving money",
+        "points": 12
+      },
+      {
+        "text": "Cleaning room",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f26",
+    "text": "Name an excuse people use to cancel plans at the last minute.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Not feeling well",
+        "points": 24
+      },
+      {
+        "text": "Kuch kaam aaya / something came up",
+        "points": 20
+      },
+      {
+        "text": "Too tired",
+        "points": 18
+      },
+      {
+        "text": "Family emergency",
+        "points": 16
+      },
+      {
+        "text": "Got submission / deadlines",
+        "points": 12
+      },
+      {
+        "text": "Not in the mood",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f27",
+    "text": "Name something people hide from their parents.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Bad marks",
+        "points": 24
+      },
+      {
+        "text": "Broken things",
+        "points": 20
+      },
+      {
+        "text": "Spending money",
+        "points": 18
+      },
+      {
+        "text": "A relationship",
+        "points": 16
+      },
+      {
+        "text": "Screen time",
+        "points": 12
+      },
+      {
+        "text": "College complaints",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f28",
+    "text": "Name something people do when guests come home.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Clean the house",
+        "points": 24
+      },
+      {
+        "text": "Serve snacks",
+        "points": 20
+      },
+      {
+        "text": "Change clothes",
+        "points": 18
+      },
+      {
+        "text": "Hide in their room",
+        "points": 16
+      },
+      {
+        "text": "Pretend to be busy",
+        "points": 12
+      },
+      {
+        "text": "Suddenly act sanskaari",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f29",
+    "text": "Name something people do when they have the house to themselves.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Blast music",
+        "points": 24
+      },
+      {
+        "text": "Watch TV",
+        "points": 20
+      },
+      {
+        "text": "Eat all the snacks",
+        "points": 18
+      },
+      {
+        "text": "Dance",
+        "points": 16
+      },
+      {
+        "text": "Call friends over",
+        "points": 12
+      },
+      {
+        "text": "Sleep till late",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "id": "f30",
+    "text": "Name something people do when they see their teacher outside college.",
+    "enabled": true,
+    "answers": [
+      {
+        "text": "Greet",
+        "points": 24
+      },
+      {
+        "text": "Smile",
+        "points": 20
+      },
+      {
+        "text": "Hide",
+        "points": 18
+      },
+      {
+        "text": "Ignore",
+        "points": 16
+      },
+      {
+        "text": "Panic",
+        "points": 12
+      },
+      {
+        "text": "Wave",
+        "points": 10
+      }
+    ]
+  }
+]

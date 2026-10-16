@@ -1,0 +1,1691 @@
+[
+  {
+    "id": "5d6655bf00",
+    "ts": "2026-10-15T13:56:38",
+    "type": "match_start",
+    "match": "m1",
+    "teams": [
+      "A",
+      "B"
+    ],
+    "questions": [
+      "q1",
+      "q2",
+      "q3"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "f9bae71176",
+    "ts": "2026-10-15T13:57:22",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Clothes",
+    "points": 28,
+    "phase": "play"
+  },
+  {
+    "id": "020cbf38c0",
+    "ts": "2026-10-15T13:57:38",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "95f513d9e8",
+    "ts": "2026-10-15T13:57:40",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "b3e48d0826",
+    "ts": "2026-10-15T13:57:45",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Phone",
+    "points": 14,
+    "phase": "play"
+  },
+  {
+    "id": "bfde18b016",
+    "ts": "2026-10-15T13:57:48",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "b435bbfadc",
+    "ts": "2026-10-15T13:57:48",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "b"
+  },
+  {
+    "id": "78e9c4d7b2",
+    "ts": "2026-10-15T13:58:02",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Camera",
+    "points": 22,
+    "phase": "steal"
+  },
+  {
+    "id": "7d4f48743c",
+    "ts": "2026-10-15T13:58:02",
+    "type": "score",
+    "match": "m1",
+    "team": "B",
+    "points": 42,
+    "reason": "steal — pool",
+    "question": 1
+  },
+  {
+    "id": "f1bd83ebe3",
+    "ts": "2026-10-15T13:58:02",
+    "type": "steal",
+    "match": "m1",
+    "result": "success",
+    "side": "b"
+  },
+  {
+    "id": "a035ef0192",
+    "ts": "2026-10-15T13:58:19",
+    "type": "next_question",
+    "match": "m1",
+    "question": 2
+  },
+  {
+    "id": "c2818dd0e0",
+    "ts": "2026-10-15T13:58:46",
+    "type": "reset",
+    "match": null
+  },
+  {
+    "id": "cb56f4491b",
+    "ts": "2026-10-15T15:50:59",
+    "type": "match_start",
+    "match": "m1",
+    "teams": [
+      "A",
+      "B"
+    ],
+    "questions": [
+      "q1",
+      "q2",
+      "q3"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "ce0e024cf1",
+    "ts": "2026-10-15T15:51:41",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Money",
+    "points": 18,
+    "phase": "play"
+  },
+  {
+    "id": "63f0c96a5d",
+    "ts": "2026-10-15T15:52:09",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Clothes",
+    "points": 28,
+    "phase": "play"
+  },
+  {
+    "id": "afaf45dde9",
+    "ts": "2026-10-15T15:52:23",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "1c347de056",
+    "ts": "2026-10-15T15:53:01",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Phone",
+    "points": 14,
+    "phase": "play"
+  },
+  {
+    "id": "20f60d0101",
+    "ts": "2026-10-15T15:53:18",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "d071c2c154",
+    "ts": "2026-10-15T15:53:24",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "009a7c5939",
+    "ts": "2026-10-15T15:53:24",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "b"
+  },
+  {
+    "id": "c274c459db",
+    "ts": "2026-10-15T15:54:00",
+    "type": "steal",
+    "match": "m1",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "ccd9d2e914",
+    "ts": "2026-10-15T15:54:00",
+    "type": "score",
+    "match": "m1",
+    "team": "A",
+    "points": 60,
+    "reason": "steal failed — pool stays",
+    "question": 1
+  },
+  {
+    "id": "c4e2a08783",
+    "ts": "2026-10-15T15:54:06",
+    "type": "next_question",
+    "match": "m1",
+    "question": 2
+  },
+  {
+    "id": "81ad365630",
+    "ts": "2026-10-15T15:54:22",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Traffic",
+    "points": 38,
+    "phase": "play"
+  },
+  {
+    "id": "e71e84b113",
+    "ts": "2026-10-15T15:54:41",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Overslept",
+    "points": 27,
+    "phase": "play"
+  },
+  {
+    "id": "c0204943a5",
+    "ts": "2026-10-15T15:55:39",
+    "type": "strike",
+    "match": "m1",
+    "side": "b",
+    "count": 1
+  },
+  {
+    "id": "61911d1f9c",
+    "ts": "2026-10-15T15:55:59",
+    "type": "strike",
+    "match": "m1",
+    "side": "b",
+    "count": 2
+  },
+  {
+    "id": "f87c2c47d3",
+    "ts": "2026-10-15T15:56:03",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Forgot something",
+    "points": 8,
+    "phase": "play"
+  },
+  {
+    "id": "7b43f975c5",
+    "ts": "2026-10-15T15:56:20",
+    "type": "strike",
+    "match": "m1",
+    "side": "b",
+    "count": 3
+  },
+  {
+    "id": "6f4c26ee49",
+    "ts": "2026-10-15T15:56:20",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "a"
+  },
+  {
+    "id": "23b9ca0095",
+    "ts": "2026-10-15T15:56:29",
+    "type": "steal",
+    "match": "m1",
+    "result": "failed",
+    "side": "a"
+  },
+  {
+    "id": "78f0739945",
+    "ts": "2026-10-15T15:56:29",
+    "type": "score",
+    "match": "m1",
+    "team": "B",
+    "points": 73,
+    "reason": "steal failed — pool stays",
+    "question": 2
+  },
+  {
+    "id": "2de84766c6",
+    "ts": "2026-10-15T15:56:35",
+    "type": "show",
+    "match": "m1",
+    "answer": "Car trouble",
+    "points": 0
+  },
+  {
+    "id": "bd2cdd7f44",
+    "ts": "2026-10-15T15:56:37",
+    "type": "show",
+    "match": "m1",
+    "answer": "Alarm didn't ring",
+    "points": 0
+  },
+  {
+    "id": "8ff3d0fbb7",
+    "ts": "2026-10-15T15:57:25",
+    "type": "next_question",
+    "match": "m1",
+    "question": 3
+  },
+  {
+    "id": "9eda596f93",
+    "ts": "2026-10-15T15:57:31",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Books",
+    "points": 35,
+    "phase": "play"
+  },
+  {
+    "id": "789354222d",
+    "ts": "2026-10-15T15:57:34",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Pen / Pencil",
+    "points": 25,
+    "phase": "play"
+  },
+  {
+    "id": "32279e07c7",
+    "ts": "2026-10-15T15:57:38",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "e38f296155",
+    "ts": "2026-10-15T15:57:42",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "60a7b90114",
+    "ts": "2026-10-15T15:57:46",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Lunch box",
+    "points": 18,
+    "phase": "play"
+  },
+  {
+    "id": "990711101e",
+    "ts": "2026-10-15T15:57:49",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Water bottle",
+    "points": 12,
+    "phase": "play"
+  },
+  {
+    "id": "2fc6f44fce",
+    "ts": "2026-10-15T15:58:03",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "b47fc75a86",
+    "ts": "2026-10-15T15:58:03",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "b"
+  },
+  {
+    "id": "da1585169e",
+    "ts": "2026-10-15T15:58:23",
+    "type": "steal",
+    "match": "m1",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "3135e2621a",
+    "ts": "2026-10-15T15:58:23",
+    "type": "score",
+    "match": "m1",
+    "team": "A",
+    "points": 90,
+    "reason": "steal failed — pool stays",
+    "question": 3
+  },
+  {
+    "id": "c7ff20af8b",
+    "ts": "2026-10-15T15:58:38",
+    "type": "match_complete",
+    "match": "m1",
+    "winner": "A",
+    "final": {
+      "a": 150,
+      "b": 73
+    }
+  },
+  {
+    "id": "93085942c8",
+    "ts": "2026-10-15T15:58:46",
+    "type": "match_start",
+    "match": "m2",
+    "teams": [
+      "C",
+      "D"
+    ],
+    "questions": [
+      "q4",
+      "q5",
+      "q6"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "bd5979e008",
+    "ts": "2026-10-15T15:59:10",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Popcorn",
+    "points": 45,
+    "phase": "play"
+  },
+  {
+    "id": "8984e1b3c4",
+    "ts": "2026-10-15T15:59:17",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "09e244179b",
+    "ts": "2026-10-15T15:59:23",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Nachos",
+    "points": 12,
+    "phase": "play"
+  },
+  {
+    "id": "21665576ff",
+    "ts": "2026-10-15T15:59:28",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "06155f88b6",
+    "ts": "2026-10-15T15:59:44",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "44f7d819c4",
+    "ts": "2026-10-15T15:59:44",
+    "type": "steal_start",
+    "match": "m2",
+    "side": "b"
+  },
+  {
+    "id": "e372ee0ccd",
+    "ts": "2026-10-15T15:59:48",
+    "type": "steal",
+    "match": "m2",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "308220eeba",
+    "ts": "2026-10-15T15:59:48",
+    "type": "score",
+    "match": "m2",
+    "team": "C",
+    "points": 57,
+    "reason": "steal failed — pool stays",
+    "question": 1
+  },
+  {
+    "id": "a8cd5e9aee",
+    "ts": "2026-10-15T15:59:57",
+    "type": "next_question",
+    "match": "m2",
+    "question": 2
+  },
+  {
+    "id": "64765b156e",
+    "ts": "2026-10-15T16:00:03",
+    "type": "undo",
+    "match": "m2"
+  },
+  {
+    "id": "b740aa43e3",
+    "ts": "2026-10-15T16:01:01",
+    "type": "next_question",
+    "match": "m2",
+    "question": 2
+  },
+  {
+    "id": "e88a876c72",
+    "ts": "2026-10-15T16:01:09",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Brush teeth",
+    "points": 32,
+    "phase": "play"
+  },
+  {
+    "id": "e463f96f29",
+    "ts": "2026-10-15T16:01:22",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 1
+  },
+  {
+    "id": "e5e5268e92",
+    "ts": "2026-10-15T16:01:24",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Use bathroom",
+    "points": 14,
+    "phase": "play"
+  },
+  {
+    "id": "a9cbbb6492",
+    "ts": "2026-10-15T16:01:44",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 2
+  },
+  {
+    "id": "01e5910779",
+    "ts": "2026-10-15T16:01:51",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Check phone",
+    "points": 26,
+    "phase": "play"
+  },
+  {
+    "id": "c8ebc8e8ce",
+    "ts": "2026-10-15T16:01:58",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 3
+  },
+  {
+    "id": "332a16d1a3",
+    "ts": "2026-10-15T16:01:58",
+    "type": "steal_start",
+    "match": "m2",
+    "side": "a"
+  },
+  {
+    "id": "afd6a69d9b",
+    "ts": "2026-10-15T16:02:20",
+    "type": "steal",
+    "match": "m2",
+    "result": "failed",
+    "side": "a"
+  },
+  {
+    "id": "d918cc4e34",
+    "ts": "2026-10-15T16:02:20",
+    "type": "score",
+    "match": "m2",
+    "team": "D",
+    "points": 72,
+    "reason": "steal failed — pool stays",
+    "question": 2
+  },
+  {
+    "id": "17f80b7176",
+    "ts": "2026-10-15T16:02:25",
+    "type": "undo",
+    "match": "m2"
+  },
+  {
+    "id": "be1032f23f",
+    "ts": "2026-10-15T16:02:40",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Make coffee",
+    "points": 10,
+    "phase": "steal"
+  },
+  {
+    "id": "a079e3339d",
+    "ts": "2026-10-15T16:02:40",
+    "type": "score",
+    "match": "m2",
+    "team": "C",
+    "points": 72,
+    "reason": "steal — pool",
+    "question": 2
+  },
+  {
+    "id": "95b0dd3d3e",
+    "ts": "2026-10-15T16:02:40",
+    "type": "steal",
+    "match": "m2",
+    "result": "success",
+    "side": "a"
+  },
+  {
+    "id": "945cdea5cc",
+    "ts": "2026-10-15T16:02:44",
+    "type": "next_question",
+    "match": "m2",
+    "question": 3
+  },
+  {
+    "id": "6927ef35d4",
+    "ts": "2026-10-15T16:02:57",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Mushrooms",
+    "points": 16,
+    "phase": "play"
+  },
+  {
+    "id": "6ac8a317e1",
+    "ts": "2026-10-15T16:02:59",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "c94087ba21",
+    "ts": "2026-10-15T16:03:04",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "2caf9975f2",
+    "ts": "2026-10-15T16:03:12",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "fba03aa24f",
+    "ts": "2026-10-15T16:03:12",
+    "type": "steal_start",
+    "match": "m2",
+    "side": "b"
+  },
+  {
+    "id": "16e7814ac9",
+    "ts": "2026-10-15T16:03:16",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Pepperoni",
+    "points": 38,
+    "phase": "steal"
+  },
+  {
+    "id": "9e9676556a",
+    "ts": "2026-10-15T16:03:16",
+    "type": "score",
+    "match": "m2",
+    "team": "D",
+    "points": 16,
+    "reason": "steal — pool",
+    "question": 3
+  },
+  {
+    "id": "44cfc35a52",
+    "ts": "2026-10-15T16:03:16",
+    "type": "steal",
+    "match": "m2",
+    "result": "success",
+    "side": "b"
+  },
+  {
+    "id": "2886bc5491",
+    "ts": "2026-10-15T16:04:02",
+    "type": "match_complete",
+    "match": "m2",
+    "winner": "C",
+    "final": {
+      "a": 129,
+      "b": 16
+    }
+  },
+  {
+    "id": "45cb95a01c",
+    "ts": "2026-10-15T16:04:08",
+    "type": "match_start",
+    "match": "m3",
+    "teams": [
+      "A",
+      "C"
+    ],
+    "questions": [
+      "q7",
+      "q8",
+      "q9"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "0302faf799",
+    "ts": "2026-10-15T16:04:39",
+    "type": "reveal",
+    "match": "m3",
+    "answer": "Dog",
+    "points": 42,
+    "phase": "play"
+  },
+  {
+    "id": "6df71e3fcf",
+    "ts": "2026-10-15T16:04:41",
+    "type": "reveal",
+    "match": "m3",
+    "answer": "Cat",
+    "points": 32,
+    "phase": "play"
+  },
+  {
+    "id": "71af7f5654",
+    "ts": "2026-10-15T16:04:44",
+    "type": "strike",
+    "match": "m3",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "ecf50a8d0f",
+    "ts": "2026-10-15T16:04:55",
+    "type": "strike",
+    "match": "m3",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "ed55c3b478",
+    "ts": "2026-10-15T16:05:01",
+    "type": "strike",
+    "match": "m3",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "f7a485fe79",
+    "ts": "2026-10-15T16:05:01",
+    "type": "steal_start",
+    "match": "m3",
+    "side": "b"
+  },
+  {
+    "id": "7564a8defe",
+    "ts": "2026-10-15T16:05:04",
+    "type": "steal",
+    "match": "m3",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "fc13c1ab15",
+    "ts": "2026-10-15T16:05:04",
+    "type": "score",
+    "match": "m3",
+    "team": "A",
+    "points": 74,
+    "reason": "steal failed — pool stays",
+    "question": 1
+  },
+  {
+    "id": "a1f6c6b6f1",
+    "ts": "2026-10-15T16:05:29",
+    "type": "undo",
+    "match": "m3"
+  },
+  {
+    "id": "479115f3a2",
+    "ts": "2026-10-15T16:05:33",
+    "type": "steal",
+    "match": "m3",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "e24e39ab67",
+    "ts": "2026-10-15T16:05:33",
+    "type": "score",
+    "match": "m3",
+    "team": "A",
+    "points": 74,
+    "reason": "steal failed — pool stays",
+    "question": 1
+  },
+  {
+    "id": "02451248d7",
+    "ts": "2026-10-15T16:05:39",
+    "type": "next_question",
+    "match": "m3",
+    "question": 2
+  },
+  {
+    "id": "f5c933e257",
+    "ts": "2026-10-15T16:05:52",
+    "type": "strike",
+    "match": "m3",
+    "side": "b",
+    "count": 1
+  },
+  {
+    "id": "482748543e",
+    "ts": "2026-10-15T16:06:03",
+    "type": "strike",
+    "match": "m3",
+    "side": "b",
+    "count": 2
+  },
+  {
+    "id": "2e953f5290",
+    "ts": "2026-10-15T16:06:09",
+    "type": "strike",
+    "match": "m3",
+    "side": "b",
+    "count": 3
+  },
+  {
+    "id": "ac0924eba6",
+    "ts": "2026-10-15T16:06:09",
+    "type": "steal_start",
+    "match": "m3",
+    "side": "a"
+  },
+  {
+    "id": "757b1de507",
+    "ts": "2026-10-15T16:06:13",
+    "type": "steal",
+    "match": "m3",
+    "result": "failed",
+    "side": "a"
+  },
+  {
+    "id": "72319a4923",
+    "ts": "2026-10-15T16:07:12",
+    "type": "next_question",
+    "match": "m3",
+    "question": 3
+  },
+  {
+    "id": "dadf021609",
+    "ts": "2026-10-15T16:07:20",
+    "type": "reveal",
+    "match": "m3",
+    "answer": "Beach",
+    "points": 34,
+    "phase": "play"
+  },
+  {
+    "id": "93bef48b03",
+    "ts": "2026-10-15T16:07:22",
+    "type": "strike",
+    "match": "m3",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "3a4124ca9d",
+    "ts": "2026-10-15T16:07:31",
+    "type": "reveal",
+    "match": "m3",
+    "answer": "Mountains",
+    "points": 10,
+    "phase": "play"
+  },
+  {
+    "id": "535d36d1e0",
+    "ts": "2026-10-15T16:07:36",
+    "type": "strike",
+    "match": "m3",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "0e1b071a34",
+    "ts": "2026-10-15T16:07:38",
+    "type": "reveal",
+    "match": "m3",
+    "answer": "Spa",
+    "points": 18,
+    "phase": "play"
+  },
+  {
+    "id": "3423c731c7",
+    "ts": "2026-10-15T16:08:14",
+    "type": "strike",
+    "match": "m3",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "8860295bff",
+    "ts": "2026-10-15T16:08:14",
+    "type": "steal_start",
+    "match": "m3",
+    "side": "b"
+  },
+  {
+    "id": "52416946e2",
+    "ts": "2026-10-15T16:08:25",
+    "type": "steal",
+    "match": "m3",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "6a8d30ef89",
+    "ts": "2026-10-15T16:08:25",
+    "type": "score",
+    "match": "m3",
+    "team": "A",
+    "points": 62,
+    "reason": "steal failed — pool stays",
+    "question": 3
+  },
+  {
+    "id": "a455971840",
+    "ts": "2026-10-15T16:08:58",
+    "type": "tournament_complete",
+    "match": "m3",
+    "champion": "A"
+  },
+  {
+    "id": "a67cac5bc7",
+    "ts": "2026-10-15T16:08:58",
+    "type": "match_complete",
+    "match": "m3",
+    "winner": "A",
+    "final": {
+      "a": 136,
+      "b": 0
+    }
+  },
+  {
+    "id": "d59f17a5e4",
+    "ts": "2026-10-16T16:33:41",
+    "type": "reset",
+    "match": null
+  },
+  {
+    "id": "4cb8a88150",
+    "ts": "2026-10-16T16:36:07",
+    "type": "question_import",
+    "match": null,
+    "count": 30
+  },
+  {
+    "id": "q1",
+    "ts": "2026-10-16T16:36:17",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q2",
+    "ts": "2026-10-16T16:36:21",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q3",
+    "ts": "2026-10-16T16:36:22",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q4",
+    "ts": "2026-10-16T16:36:23",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q5",
+    "ts": "2026-10-16T16:36:28",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q6",
+    "ts": "2026-10-16T16:36:34",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q7",
+    "ts": "2026-10-16T16:36:37",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q8",
+    "ts": "2026-10-16T16:36:40",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "q9",
+    "ts": "2026-10-16T16:36:42",
+    "type": "question_delete",
+    "match": null
+  },
+  {
+    "id": "4a1d510e59",
+    "ts": "2026-10-16T16:36:54",
+    "type": "match_start",
+    "match": "m1",
+    "teams": [
+      "A",
+      "B"
+    ],
+    "questions": [
+      "q10",
+      "q11",
+      "q12"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "2d77c828f9",
+    "ts": "2026-10-16T16:40:56",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Wheel",
+    "points": 25,
+    "phase": "play"
+  },
+  {
+    "id": "131ab34c99",
+    "ts": "2026-10-16T16:41:03",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Ball",
+    "points": 33,
+    "phase": "play"
+  },
+  {
+    "id": "b41c637ea9",
+    "ts": "2026-10-16T16:41:16",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "9b38c73313",
+    "ts": "2026-10-16T16:41:28",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "5b5461a745",
+    "ts": "2026-10-16T16:41:38",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Clock",
+    "points": 14,
+    "phase": "play"
+  },
+  {
+    "id": "7549796264",
+    "ts": "2026-10-16T16:41:40",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Plate",
+    "points": 5,
+    "phase": "play"
+  },
+  {
+    "id": "fd86073a53",
+    "ts": "2026-10-16T16:42:03",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "f935b634bf",
+    "ts": "2026-10-16T16:42:03",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "b"
+  },
+  {
+    "id": "e76fe8d77d",
+    "ts": "2026-10-16T16:42:07",
+    "type": "steal",
+    "match": "m1",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "affe388ab1",
+    "ts": "2026-10-16T16:42:07",
+    "type": "score",
+    "match": "m1",
+    "team": "A",
+    "points": 77,
+    "reason": "steal failed — pool stays",
+    "question": 1
+  },
+  {
+    "id": "dea5b53211",
+    "ts": "2026-10-16T16:42:11",
+    "type": "show",
+    "match": "m1",
+    "answer": "Coin",
+    "points": 0
+  },
+  {
+    "id": "13e4e5e0f5",
+    "ts": "2026-10-16T16:42:14",
+    "type": "show",
+    "match": "m1",
+    "answer": "Orange",
+    "points": 0
+  },
+  {
+    "id": "5d41cdffe8",
+    "ts": "2026-10-16T16:42:25",
+    "type": "next_question",
+    "match": "m1",
+    "question": 2
+  },
+  {
+    "id": "1f4eb6640b",
+    "ts": "2026-10-16T16:42:33",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Iron Man",
+    "points": 12,
+    "phase": "play"
+  },
+  {
+    "id": "c15f5bd1d6",
+    "ts": "2026-10-16T16:42:45",
+    "type": "strike",
+    "match": "m1",
+    "side": "b",
+    "count": 1
+  },
+  {
+    "id": "a5c70c5116",
+    "ts": "2026-10-16T16:42:52",
+    "type": "strike",
+    "match": "m1",
+    "side": "b",
+    "count": 2
+  },
+  {
+    "id": "bcf078fe25",
+    "ts": "2026-10-16T16:43:00",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Superman",
+    "points": 30,
+    "phase": "play"
+  },
+  {
+    "id": "86c9364824",
+    "ts": "2026-10-16T16:43:09",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Batman",
+    "points": 28,
+    "phase": "play"
+  },
+  {
+    "id": "e496f71aae",
+    "ts": "2026-10-16T16:43:21",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Hulk",
+    "points": 5,
+    "phase": "play"
+  },
+  {
+    "id": "30a5e7d72b",
+    "ts": "2026-10-16T16:43:35",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Spider-Man",
+    "points": 20,
+    "phase": "play"
+  },
+  {
+    "id": "a62dc56d74",
+    "ts": "2026-10-16T16:43:55",
+    "type": "strike",
+    "match": "m1",
+    "side": "b",
+    "count": 3
+  },
+  {
+    "id": "b7f03299c0",
+    "ts": "2026-10-16T16:43:55",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "a"
+  },
+  {
+    "id": "933a132afc",
+    "ts": "2026-10-16T16:44:17",
+    "type": "steal",
+    "match": "m1",
+    "result": "failed",
+    "side": "a"
+  },
+  {
+    "id": "eff9c412af",
+    "ts": "2026-10-16T16:44:17",
+    "type": "score",
+    "match": "m1",
+    "team": "B",
+    "points": 95,
+    "reason": "steal failed — pool stays",
+    "question": 2
+  },
+  {
+    "id": "a078fe77c0",
+    "ts": "2026-10-16T16:44:19",
+    "type": "show",
+    "match": "m1",
+    "answer": "Wonder Woman",
+    "points": 0
+  },
+  {
+    "id": "896d99b6f8",
+    "ts": "2026-10-16T16:44:31",
+    "type": "next_question",
+    "match": "m1",
+    "question": 3
+  },
+  {
+    "id": "263ee8386b",
+    "ts": "2026-10-16T16:44:36",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Apple",
+    "points": 40,
+    "phase": "play"
+  },
+  {
+    "id": "36fca97ad8",
+    "ts": "2026-10-16T16:44:41",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Strawberry",
+    "points": 28,
+    "phase": "play"
+  },
+  {
+    "id": "ed274b835c",
+    "ts": "2026-10-16T16:44:45",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Cherry",
+    "points": 16,
+    "phase": "play"
+  },
+  {
+    "id": "572600a6cb",
+    "ts": "2026-10-16T16:44:49",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "d9aaf86d8b",
+    "ts": "2026-10-16T16:45:03",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "7e7d715121",
+    "ts": "2026-10-16T16:45:39",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Raspberry",
+    "points": 1,
+    "phase": "play"
+  },
+  {
+    "id": "13ad7cf001",
+    "ts": "2026-10-16T16:45:52",
+    "type": "strike",
+    "match": "m1",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "c4315ae58e",
+    "ts": "2026-10-16T16:45:52",
+    "type": "steal_start",
+    "match": "m1",
+    "side": "b"
+  },
+  {
+    "id": "fa5124bc8a",
+    "ts": "2026-10-16T16:46:19",
+    "type": "reveal",
+    "match": "m1",
+    "answer": "Watermelon",
+    "points": 10,
+    "phase": "steal"
+  },
+  {
+    "id": "e6df7a4199",
+    "ts": "2026-10-16T16:46:19",
+    "type": "score",
+    "match": "m1",
+    "team": "B",
+    "points": 85,
+    "reason": "steal — pool",
+    "question": 3
+  },
+  {
+    "id": "739b34539f",
+    "ts": "2026-10-16T16:46:19",
+    "type": "steal",
+    "match": "m1",
+    "result": "success",
+    "side": "b"
+  },
+  {
+    "id": "828d79d091",
+    "ts": "2026-10-16T16:46:28",
+    "type": "match_complete",
+    "match": "m1",
+    "winner": "B",
+    "final": {
+      "a": 77,
+      "b": 180
+    }
+  },
+  {
+    "id": "c24fc20c75",
+    "ts": "2026-10-16T16:46:32",
+    "type": "match_start",
+    "match": "m2",
+    "teams": [
+      "C",
+      "D"
+    ],
+    "questions": [
+      "f01",
+      "f02",
+      "f03"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "c4197436ea",
+    "ts": "2026-10-16T16:46:52",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "TV remote",
+    "points": 24,
+    "phase": "play"
+  },
+  {
+    "id": "a1078a93e1",
+    "ts": "2026-10-16T16:46:56",
+    "type": "set_active",
+    "match": "m2",
+    "side": "b"
+  },
+  {
+    "id": "59b7fa9116",
+    "ts": "2026-10-16T16:47:06",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Clothes",
+    "points": 20,
+    "phase": "play"
+  },
+  {
+    "id": "64c16b69b2",
+    "ts": "2026-10-16T16:47:16",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 1
+  },
+  {
+    "id": "714b12475b",
+    "ts": "2026-10-16T16:47:35",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 2
+  },
+  {
+    "id": "c8c20fd74c",
+    "ts": "2026-10-16T16:47:52",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Food",
+    "points": 18,
+    "phase": "play"
+  },
+  {
+    "id": "506d6983dd",
+    "ts": "2026-10-16T16:48:07",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 3
+  },
+  {
+    "id": "dfdd04863a",
+    "ts": "2026-10-16T16:48:07",
+    "type": "steal_start",
+    "match": "m2",
+    "side": "a"
+  },
+  {
+    "id": "cac6ce06cf",
+    "ts": "2026-10-16T16:48:22",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Favourite seat",
+    "points": 12,
+    "phase": "steal"
+  },
+  {
+    "id": "f4eb238a9b",
+    "ts": "2026-10-16T16:48:22",
+    "type": "score",
+    "match": "m2",
+    "team": "C",
+    "points": 62,
+    "reason": "steal — pool",
+    "question": 1
+  },
+  {
+    "id": "9e725be9b7",
+    "ts": "2026-10-16T16:48:22",
+    "type": "steal",
+    "match": "m2",
+    "result": "success",
+    "side": "a"
+  },
+  {
+    "id": "1d7086b3a8",
+    "ts": "2026-10-16T16:48:28",
+    "type": "next_question",
+    "match": "m2",
+    "question": 2
+  },
+  {
+    "id": "e062cbd6ca",
+    "ts": "2026-10-16T16:48:37",
+    "type": "set_active",
+    "match": "m2",
+    "side": "a"
+  },
+  {
+    "id": "946459f85e",
+    "ts": "2026-10-16T16:48:44",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 1
+  },
+  {
+    "id": "4658eb29e5",
+    "ts": "2026-10-16T16:49:19",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Glue",
+    "points": 16,
+    "phase": "play"
+  },
+  {
+    "id": "49b13025b2",
+    "ts": "2026-10-16T16:49:40",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 2
+  },
+  {
+    "id": "99666efe09",
+    "ts": "2026-10-16T16:49:44",
+    "type": "strike",
+    "match": "m2",
+    "side": "a",
+    "count": 3
+  },
+  {
+    "id": "f7100b5203",
+    "ts": "2026-10-16T16:49:44",
+    "type": "steal_start",
+    "match": "m2",
+    "side": "b"
+  },
+  {
+    "id": "b0745a3db6",
+    "ts": "2026-10-16T16:50:10",
+    "type": "steal",
+    "match": "m2",
+    "result": "failed",
+    "side": "b"
+  },
+  {
+    "id": "8044b953ad",
+    "ts": "2026-10-16T16:50:10",
+    "type": "score",
+    "match": "m2",
+    "team": "C",
+    "points": 16,
+    "reason": "steal failed — pool stays",
+    "question": 2
+  },
+  {
+    "id": "ed1dc7ae41",
+    "ts": "2026-10-16T16:50:16",
+    "type": "next_question",
+    "match": "m2",
+    "question": 3
+  },
+  {
+    "id": "f2a43eecb9",
+    "ts": "2026-10-16T16:50:25",
+    "type": "set_active",
+    "match": "m2",
+    "side": "b"
+  },
+  {
+    "id": "63ac64b096",
+    "ts": "2026-10-16T16:50:33",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Use the washroom",
+    "points": 16,
+    "phase": "play"
+  },
+  {
+    "id": "bebea7aa7d",
+    "ts": "2026-10-16T16:50:43",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 1
+  },
+  {
+    "id": "6c1fb836d7",
+    "ts": "2026-10-16T16:50:50",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 2
+  },
+  {
+    "id": "94a5d8b382",
+    "ts": "2026-10-16T16:51:14",
+    "type": "reveal",
+    "match": "m2",
+    "answer": "Check phone",
+    "points": 24,
+    "phase": "play"
+  },
+  {
+    "id": "9b243f9b28",
+    "ts": "2026-10-16T16:51:41",
+    "type": "strike",
+    "match": "m2",
+    "side": "b",
+    "count": 3
+  },
+  {
+    "id": "f52d025cbb",
+    "ts": "2026-10-16T16:51:41",
+    "type": "steal_start",
+    "match": "m2",
+    "side": "a"
+  },
+  {
+    "id": "28da4e9aee",
+    "ts": "2026-10-16T16:51:49",
+    "type": "steal",
+    "match": "m2",
+    "result": "failed",
+    "side": "a"
+  },
+  {
+    "id": "52d65f1184",
+    "ts": "2026-10-16T16:51:49",
+    "type": "score",
+    "match": "m2",
+    "team": "D",
+    "points": 40,
+    "reason": "steal failed — pool stays",
+    "question": 3
+  },
+  {
+    "id": "988e99d8cd",
+    "ts": "2026-10-16T16:52:04",
+    "type": "match_complete",
+    "match": "m2",
+    "winner": "C",
+    "final": {
+      "a": 78,
+      "b": 40
+    }
+  },
+  {
+    "id": "cdf863378f",
+    "ts": "2026-10-16T16:52:11",
+    "type": "match_start",
+    "match": "m3",
+    "teams": [
+      "B",
+      "C"
+    ],
+    "questions": [
+      "f04",
+      "f05",
+      "f06"
+    ],
+    "rules": {
+      "mode": "pool",
+      "strike_limit": 3,
+      "steal": true
+    }
+  },
+  {
+    "id": "df4d2fac6d",
+    "ts": "2026-10-16T18:53:05",
+    "type": "reset",
+    "match": null
+  },
+  {
+    "id": "70beebab52",
+    "ts": "2026-10-16T18:53:14",
+    "type": "settings",
+    "match": null,
+    "event": "Family Feud",
+    "round": "Round 3",
+    "strike_limit": 3,
+    "steal": true,
+    "mode": "pool",
+    "per_match": 3
+  }
+]

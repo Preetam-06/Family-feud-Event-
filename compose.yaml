@@ -1,0 +1,13 @@
+services:
+  family-feud:
+    build: .
+    container_name: family-feud
+    ports:
+      - "8000:8000"
+    environment:
+      ADMIN_PIN: ${ADMIN_PIN:-feud2026}
+      HOST: 0.0.0.0
+      PORT: 8000
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

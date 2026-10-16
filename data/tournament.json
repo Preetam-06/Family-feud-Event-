@@ -1,0 +1,86 @@
+{
+  "id": "4c370e92",
+  "schema": 1,
+  "created": "2026-10-16T18:53:05",
+  "completed": null,
+  "settings": {
+    "event": "Family Feud",
+    "round": "Round 3",
+    "strike_limit": 3,
+    "steal": true,
+    "mode": "pool",
+    "per_match": 10
+  },
+  "teams": [
+    {
+      "id": "A",
+      "name": "Team Alpha"
+    },
+    {
+      "id": "B",
+      "name": "Team Nova"
+    },
+    {
+      "id": "C",
+      "name": "Team Phoenix"
+    },
+    {
+      "id": "D",
+      "name": "Team Titans"
+    }
+  ],
+  "matches": [
+    {
+      "id": "m1",
+      "label": "Semifinal 1",
+      "teams": [
+        "A",
+        "B"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "m2",
+      "label": "Semifinal 2",
+      "teams": [
+        "C",
+        "D"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "m3",
+      "label": "Grand Final",
+      "teams": [
+        null,
+        null
+      ],
+      "status": "pending"
+    }
+  ],
+  "current": null,
+  "spotlight": "auto",
+  "champion": null,
+  "fx": {
+    "id": 0,
+    "type": null
+  },
+  "seen": [
+    "wy2248i4r8e1792156985395",
+    "4o5a03tak3j1792156994536",
+    "d7eygqk1e841792157011585",
+    "w7wdoheqk81792157012777",
+    "pltke3kmtqa1792157013773",
+    "n3v6as8yr81792157014024",
+    "cin3uie4ar1792157014604",
+    "9o655z3zv91792157015397",
+    "70gv5dzjr721792157016781",
+    "vkcfphqitd1792157018841",
+    "4vidaz4nlp41792157019521",
+    "jpxnrl8r0ng1792157024466",
+    "9612dhw1rgu1792157027881",
+    "j8fno4z5t8r1792157032149",
+    "hb8fqvjtdo61792157033741",
+    "jgkpa9d68z1792157039305"
+  ]
+}

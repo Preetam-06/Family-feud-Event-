@@ -1,0 +1,18 @@
+/* Shared look: the marquee-lit oval logo */
+:root{--navy:#081046;--blue:#1b3cd6;--gold:#ffc83d;--red:#e5233b;--ink:#0e1a4d}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:.2}}
+
+.logo{position:relative;width:60em;height:34em;font-size:16px;flex:none}
+.logo .ring{position:absolute;inset:0;border-radius:50%;border:1.5em dotted #ffd34d;
+  filter:drop-shadow(0 0 .7em #ffa800);animation:blink 1s steps(1) infinite}
+.logo .r2{inset:.75em;border-color:#fff4b8;animation-delay:-.5s}
+.logo .plate{position:absolute;inset:3em;border-radius:50%;
+  background:radial-gradient(circle at 50% 30%,#3a5bff 0%,#0f23a0 55%,#08105a 100%);
+  border:.55em solid #ff9d1c;box-shadow:inset 0 0 3em #000a,0 0 2em #ff9d1c88;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.logo .plate span{font-family:Impact,"Arial Black","Haettenschweiler",sans-serif;font-size:var(--fs,11em);
+  line-height:.88;font-style:italic;letter-spacing:.01em;transform:rotate(-4deg) skewX(-6deg);
+    background:linear-gradient(#fff6c2,#ffc83d 55%,#ff8f1f);-webkit-background-clip:text;background-clip:text;
+  color:transparent;filter:drop-shadow(.07em 0 0 #0a1160) drop-shadow(-.07em 0 0 #0a1160) drop-shadow(0 .07em 0 #0a1160) drop-shadow(0 -.07em 0 #0a1160) drop-shadow(0 .22em .05em #040733)}
+.logo .plate span+span{background:linear-gradient(#fff,#cfe0ff 60%,#8fb0ff);-webkit-background-clip:text;background-clip:text}
+.logo .plate span:empty{display:none}
