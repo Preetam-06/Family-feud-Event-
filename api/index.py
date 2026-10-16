@@ -58,7 +58,7 @@ def application(environ, start_response):
                 return response(start_response, "302 Found", b"", [("Location", "/admin")], "text/plain")
             if path in core.PAGES:
                 filename, content_type = core.PAGES[path]
-                return response(start_response, "200 OK", (core.WEB / filename).read_bytes(), content_type)
+                return response(start_response, "200 OK", (core.WEB / filename).read_bytes(), content_type=content_type)
             if path == "/api/screen":
                 with core.LOCK:
                     return response(start_response, "200 OK", core.build(False))
